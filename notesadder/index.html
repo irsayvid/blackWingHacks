@@ -13,7 +13,16 @@
   </head>
   <body>
     <div class="wing">
-      <div id="calendar"></div>
+      <div class="section-content">
+        <div id="calendar"></div>
+        <!-- <br />
+        <div class="action-buttons">
+          <button class="btn-action" id="addBtn">ADD EVENT</button>
+          <button class="btn-action" id="removeBtn" disabled="">
+            REMOVE EVENT
+          </button>
+        </div> -->
+      </div>
     </div>
 
     <!-- Add jQuery library (required) -->
@@ -26,9 +35,10 @@
           calendarEvents: [
             {
               id: "bHay68s", // Event's ID (required)
-              name: "New Year", // Event name (required)
+              name: "New Year Present", // Event name (required)
               date: "January/1/2020", // Event date (required)
-              description: "Great day when everything freshly begins",
+              description:
+                "I've given few of my old toys to kids and their happines brought a smile on my face",
               type: "holiday", // Event type (required)
               everyYear: true, // Same event every year (optional)
             },
@@ -43,6 +53,8 @@
           ],
         });
       });
+
+      console.log(sessionStorage.getItem("bestthing"));
     </script>
   </body>
 </html>

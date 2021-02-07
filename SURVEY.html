@@ -187,60 +187,83 @@
         </div>
         <div class="item">
           <p>Today's Date</p>
-          <input type="date" name="bdate" required/>
+          <input type="date" name="date" id="date" required/>
           <i class="fas fa-calendar-alt"></i>
         </div>
         <div class="question">
           <p>How are you feeling?</p>
           <div class="question-answer">
             <div>
-              <input type="radio" value="none" id="radio_1" name="How are you feeling?"/>
+              <input type="radio" value="Sad" id="radio_1" name="How are you feeling?"/>
               <label for="radio_1" class="radio"><span>Sad</span></label>
             </div>
             <div>
-              <input type="radio" value="none" id="radio_2" name="How are you feeling?"/>
+              <input type="radio" value="Stressed" id="radio_2" name="How are you feeling?"/>
               <label for="radio_2" class="radio"><span>Stressed</span></label>
             </div>
             <div>
-              <input type="radio" value="none" id="radio_3" name="How are you feeling?"/>
+              <input type="radio" value="Tired" id="radio_3" name="How are you feeling?"/>
               <label for="radio_3" class="radio"><span>Tired</span></label>
             </div>
             <div>
-              <input type="radio" value="none" id="radio_4" name="How are you feeling?"/>
+              <input type="radio" value="Angry" id="radio_4" name="How are you feeling?"/>
               <label for="radio_4" class="radio"><span>Angry</span></label>
             </div>
             <div>
-              <input type="radio" value="none" id="radio_5" name="How are you feeling?"/>
+              <input type="radio" value="Okay" id="radio_5" name="How are you feeling?"/>
               <label for="radio_5" class="radio"><span>Okay</span></label>
             </div>
             <div>
-              <input type="radio" value="none" id="radio_6" name="How are you feeling?"/>
+              <input type="radio" value="Exited" id="radio_6" name="How are you feeling?"/>
               <label for="radio_6" class="radio"><span>Exited</span></label>
             </div>
             <div>
             <div>
-              <input type="radio" value="none" id="radio_7" name="How are you feeling?"/>
+              <input type="radio" value="Happy" id="radio_7" name="How are you feeling?"/>
               <label for="radio_7" class="radio"><span>Happy</span></label>
             </div>
           </div>
         </div>
           <div class="item">
             <p>Best thing that happened today?</p>
-            <input type="text" name="Best thing that happened today?"/>
+            <input type="text" id="best-thing" name="Best thing that happened today?"/>
           </div>
          <div class="item">
             <p>Worst thing that happened today?</p>
-            <input type="text" name="Worst thing that happened today?"/>
+            <input type="text" id="worst-thing" name="Worst thing that happened today?"/>
           </div>
 
         <div class="item">
           <p>Reflections on your day?</p>
-          <textarea rows="3"></textarea>
+          <textarea rows="3" id="reflections"></textarea>
         </div>
         <div class="btn-block">
-          <button type="submit" href="/">Submit</button>
+          <button type="submit" id="submit-btn" href="/">Submit</button>
         </div>
       </form>
     </div>
+
+    <!-- Add jQuery library (required) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+    <script>
+      $("#submit-btn").on('click',function(e){
+        e.preventDefault();
+        var date = document.getElementById('date').value;
+        var ele = document.getElementsByName('How are you feeling?');
+        var mood; 
+        for(i = 0; i < ele.length; i++) { 
+            if(ele[i].checked) 
+            {
+              mood = ele[i].value;
+            }
+        } 
+        var bestthing = document.getElementById('best-thing').value;
+        var worstthing = document.getElementById('worst-thing').value;
+        var reflections = document.getElementById('reflections').value;
+        console.log(date+" "+mood+" "+bestthing+" "+worstthing+" "+reflections);
+        var result = "bestthing="+bestthing;
+      });
+    </script>
   </body>
 </html>
