@@ -41,7 +41,7 @@
       .banner {
       position: relative;
       height: 210px;
-      background-image: url("/uploads/media/default/0001/01/b42dddca6e6a31b300c6ce26cb9dcac565b2f869.jpeg");  
+      background-image: url("https://storage.googleapis.com/pr-newsroom-wp/1/2019/10/Heart-and-Soul.jpg"); 
       background-size: cover;
       display: flex;
       justify-content: center;
