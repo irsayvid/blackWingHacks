@@ -1,7 +1,7 @@
 <?php
 
 $date = $_POST['date'];
-echo $date;
+// echo $date;
 $mood = $_POST['mood'];
 $bestthing = $_POST['bestthing'];
 $worstthing = $_POST['worstthing'];
