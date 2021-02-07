@@ -2,27 +2,91 @@
 <html lang="en">
   <head>
     <title>Notes Adder</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/calendar.css" />
-    <link rel="stylesheet" href="css/calendar.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,300&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/templatemo-digital-trend.css" />
+    <style>
+      .navbar {
+        position: fixed;
+        padding: 1px;
+      }
+    </style>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/calendar.css" />
+    <link rel="stylesheet" href="css/calendar.min.css" />
   </head>
   <body>
+    <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand active" href="index.html">
+          <img
+            src="images/logo.png"
+            alt="feather-wing logo"
+            width="150"
+            length="150"
+          />
+
+          <!-- <i class="fa fa-line-chart"></i> -->
+          Spread Your Wings
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="index.html#about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="index.html#project" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="index.html#testimonial" class="nav-link">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a href="./signin.html" class="nav-link">Sign in</a>
+            </li>
+            <li class="nav-item">
+              <a href="./signup.html" class="nav-link">Sign up</a>
+            </li>
+            <li class="nav-item">
+              <a href="./contact.html" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <div class="wing">
-      <div class="section-content">
-        <div id="calendar"></div>
-        <!-- <br />
+      <div id="calendar"></div>
+      <!-- <br />
         <div class="action-buttons">
           <button class="btn-action" id="addBtn">ADD EVENT</button>
           <button class="btn-action" id="removeBtn" disabled="">
             REMOVE EVENT
           </button>
         </div> -->
-      </div>
     </div>
 
     <!-- Add jQuery library (required) -->
@@ -34,21 +98,26 @@
         $("#calendar").evoCalendar({
           calendarEvents: [
             {
-              id: "bHay68s", // Event's ID (required)
-              name: "New Year Present", // Event name (required)
-              date: "January/1/2020", // Event date (required)
-              description:
-                "I've given few of my old toys to kids and their happines brought a smile on my face",
+              id: "best", // Event's ID (required)
+              name: "Best Thing", // Event name (required)
+              date: "February/7/2021", // Event date (required)
+              description: "Got to meet an old friend",
               type: "holiday", // Event type (required)
-              everyYear: true, // Same event every year (optional)
             },
             {
-              name: "Vacation Leave",
-              badge: "02/13 - 02/15", // Event badge (optional)
-              date: ["February/13/2020", "February/15/2020"], // Date range
-              description: "Vacation leave for 3 days.", // Event description (optional)
-              type: "event",
-              color: "#63d867", // Event custom color (optional)
+              id: "worst", // Event's ID (required)
+              name: "Worst thing", // Event name (required)
+              date: "February/7/2021", // Event date (required)
+              description: "Got less Marks in exam",
+              type: "holiday", // Event type (required)
+            },
+            {
+              id: "reflection", // Event's ID (required)
+              name: "Reflection", // Event name (required)
+              date: "February/7/2021", // Event date (required)
+              description:
+                "After talking to my best friend, I felt a bit better and realised I can be better. Failures  are the stepping stone of success",
+              type: "holiday", // Event type (required)
             },
           ],
         });
