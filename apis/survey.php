@@ -11,28 +11,28 @@ if(isset($date) && isset($mood) && isset($bestthing) && isset($worstthing) && is
 {
     $output0 ='<div class="container">
     <div class="col-lg-12 col-12">
-        <h2 class="text-center mb-5" data-aos="fade-up">';
+        <h2 class="text-center mb-5">';
     $output1 ='</h2>
     </div>
-    <div class="mx-2 mb-5 d-flex justify-content-center ideas" data-aos="fade-up">
+    <div class="mx-2 mb-5 d-flex justify-content-center ideas">
         <div class="col-lg-6 order-1 pb-4 text-center"><img src="images/icons/plant.svg" class="img-fluid" alt="" style="width:120px; height:120px">
         </div>
         <div class="col-lg-6 order-2 text-center">';
     $output2 ='</div>
     </div>
-    <div class="row mx-2 mb-5 d-flex align-items-center ideas" data-aos="fade-up">
+    <div class="row mx-2 mb-5 d-flex align-items-center ideas">
         <div class="col-lg-6 order-2 text-center"><img src="images/icons/goal.svg" class="img-fluid result-icon" alt="" style="width:120px; height:120px"></div>
         <div class="col-lg-6 order-1 text-center pb-4">';
     $output3 ='</div>
     </div>
-    <div class="row mx-2 mb-5  d-flex align-items-center ideas" data-aos="fade-up">
+    <div class="row mx-2 mb-5  d-flex align-items-center ideas">
         <div class="col-lg-6 order-1 text-center pb-4"><img src="images/icons/help.svg" class="img-fluid result-icon" alt="" style="width:120px; height:120px"></div>
         <div class="col-lg-6 order-2 text-center">';
         $output4='</div>
         </div>
-        <div class="row mx-2 mb-5  d-flex align-items-center ideas" data-aos="fade-up">
-            <div class="col-lg-6 order-1 text-center pb-4"><img src="images/icons/stars.svg" class="img-fluid result-icon" alt="" style="width:120px; height:120px"></div>
-            <div class="col-lg-6 order-2 text-center">';
+        <div class="row mx-2 mb-5  d-flex align-items-center ideas">
+            <div class="col-lg-6 order-2 text-center"><img src="images/icons/stars.svg" class="img-fluid result-icon" alt="" style="width:120px; height:120px"></div>
+            <div class="col-lg-6 order-1 text-center pb-4">';
         $output5='</div>
         </div>
         </div>';
@@ -51,11 +51,8 @@ if(isset($date) && isset($mood) && isset($bestthing) && isset($worstthing) && is
         $output=$output0.' Here are our tips for you based on your mood'.$output1.'Cut out Caffeine'.$output2.'Drink more water '.$output3.'Eat something sweet'.$output4.'Meditate'.$output5;
     }
     else if($mood == "Angry")
-    {
-        
-        
-        
-        $output=$output0.' Here are our tips for you based on your mood'.$output1.'Visualize yourself calm down, would the thing you’re mad about matter in 5 years? If not, stop worrying about it'.$output2.'Separate your emotions from your actions'.$output.'Distract yourself with something fun'.$output4.'Discuss your anger with someone'.$output5;
+    { 
+        $output=$output0.' Here are our tips for you based on your mood'.$output1.'Visualize yourself calm down, would the thing you’re mad about matter in 5 years? If not, stop worrying about it'.$output2.'Separate your emotions from your actions'.$output3.'Distract yourself with something fun'.$output4.'Discuss your anger with someone'.$output5;
     }
     else if($mood == "Okay")
     {
