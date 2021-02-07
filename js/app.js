@@ -1,7 +1,7 @@
 function checkUserFullName(){
-    var userSurname = document.getElementById("userFullName").value;
+    var userFullname = document.getElementById("userFullName").value;
     var flag = false;
-    if(userSurname === ""){
+    if(userFullname === ""){
         flag = true;
     }
     if(flag){
@@ -109,7 +109,7 @@ function signUp(){
             swal('Your Account Created','Your account was created successfully, you can log in now.',
             ).then((value) => {
                 setTimeout(function(){
-                    window.location.replace("../index.html");
+                    window.location.replace("./index.html");
                 }, 1000)
             });
         }).catch((error) => {
