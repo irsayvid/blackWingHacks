@@ -28,7 +28,19 @@ https://templatemo.com/tm-538-spread-your-wings
      <style>
           .navbar{
                position:fixed;
-               padding : 10px;
+               padding : 1px;
+          }
+          #result .ideas img {
+               width: 20px;
+               height: 20px;
+          }
+
+          #result .ideas {
+               padding: 20px;
+               border-radius: 20px;
+               -webkit-box-shadow: 0px 4px 12px 3px rgba(0, 0, 0, 0.1);
+               -moz-box-shadow: 0px 4px 12px 3px rgba(0, 0, 0, 0.1);
+               box-shadow: 0px 4px 12px 3px rgba(0, 0, 0, 0.1)
           }
      </style>
 
@@ -38,7 +50,7 @@ https://templatemo.com/tm-538-spread-your-wings
      <!-- MENU BAR -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand active" href="index.html">
                <img src = "images/logo.png" alt= "feather-wing logo" width = "150" length = "150" >
                
              <!-- <i class="fa fa-line-chart"></i> -->
@@ -56,17 +68,19 @@ https://templatemo.com/tm-538-spread-your-wings
                    <a href="#about" class="nav-link">About</a>
                  </li>
                  <li class="nav-item">
-                 <a href="#project" class="nav-link">Project</a>
+                 <a href="#project" class="nav-link">Services</a>
                  </li>
+                 <li class="nav-item">
+                    <a href="#testimonial" class="nav-link">Testimonials</a>
+                  </li>
                    <li class="nav-item">
                        <a href="./signin.html" class="nav-link">Sign in</a>
                    </li>
                    <li class="nav-item">
                        <a href="./signup.html" class="nav-link">Sign up</a>
                    </li>
-                   </li>
                    <li class="nav-item">
-                       <a href="./contact.html" class="nav-link active contact">Contact</a>
+                       <a href="./contact.html" class="nav-link">Contact</a>
                    </li>
                </ul>
            </div>
@@ -76,7 +90,7 @@ https://templatemo.com/tm-538-spread-your-wings
 
      <!-- HERO -->
      <section class="hero hero-bg d-flex justify-content-center align-items-center">
-               <div class="container">
+               <div class="container mt-5">
                     <div class="row">
 
                         <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
@@ -144,11 +158,11 @@ https://templatemo.com/tm-538-spread-your-wings
                                    <img src="images/project/project-image01.jpg" class="img-fluid" alt="project image">
 
                                    <div class="project-info">
-                                        <small> Survery </small>
+                                        <small> Mental Health Tracker </small>
 
                                         <h3>
-                                             <a href="project-detail.html">
-                                                  <span> Answer personalized questions</span>
+                                             <a href="./survey.html">
+                                                  <span> Answer personalized questions and get tips</span>
                                                   <i class="fa fa-angle-right project-icon"></i>
                                              </a>
                                         </h3>
@@ -163,8 +177,8 @@ https://templatemo.com/tm-538-spread-your-wings
                                         <small>Calendar</small>
 
                                         <h3>
-                                             <a href="project-detail.html">
-                                                  <span> Stay upto date</span>
+                                             <a href="./calendar.html">
+                                                  <span> Your memories tracker</span>
                                                   <i class="fa fa-angle-right project-icon"></i>
                                              </a>
                                         </h3>
@@ -176,10 +190,43 @@ https://templatemo.com/tm-538-spread-your-wings
 
 
      </section>
+     <!-- Results -->
+     <section class="results section-padding" id="results">
+          <div class="container">
+              <div class="text-center pb-5">
+                  <h3 class="title"> HOW WE STARTED</h3>
+              </div>
+              <div class="row mx-2 mb-5 d-flex align-items-center ideas">
+                  <div class="col-lg-2 order-1 text-center pb-4"><img src="images/icons/plant.svg" class="img-fluid" alt="">
+                  </div>
+                  <div class="hws-quote col-lg-10 order-2">It all started on February 2nd, 2015 by an under-grad student Md. Akramuddin Ansari of NIT Rourkela as 'Helping Hands' with the goal of educating under-priviledged children.
+                  </div>
+              </div>
+              <div class="row mx-2 mb-5 d-flex align-items-center ideas">
+                  <div class="col-lg-2 order-lg-2 text-lg-right text-center pb-4"><img src="images/icons/help.svg" class="img-fluid" alt=""></div>
+                  <div class="hws-quote col-lg-10 order-lg-1">By July 2015, our family increased to 70 helping enthusiasts as well as expanded in number of other critical concerns such as gender equality, women's safety and providing basic amenities to the poor.
+                  </div>
+              </div>
+              <div class="row mx-2 mb-5  d-flex align-items-center ideas">
+                  <div class="col-lg-2 order-1 text-center pb-4"><img src="images/icons/goal.svg" class="img-fluid" alt=""></div>
+                  <div class="hws-quote col-lg-10 order-2">With lot of financial support and donations pouring in from NIT students and the local people, Helping Hands got registered as an NGO named BLESS 'n' BLISS on November 18th, 2015.
+                  </div>
+              </div>
+              <div class="row mx-2 mb-5 d-flex align-items-center ideas">
+                  <div class="col-lg-2 order-lg-2 text-lg-right text-center pb-4"><img src="images/icons/stars.svg" class="img-fluid" alt=""></div>
+                  <div class="hws-quote col-lg-10 order-lg-1">
+                      Bless’n’Bliss is actively performing social activities in 4 cities(Rourkela, Ranchi, Jajpur, Bangalore) all over India either through student run chapters or direct activities. </div>
+              </div>
+  
+          </div>
+          </div>
+  
+          </div>
+      </section>
 
 
      <!-- TESTIMONIAL -->
-     <section class="testimonial section-padding">
+     <section class="testimonial section-padding" id="testimonial">
           <div class="container">
                <div class="row">
 

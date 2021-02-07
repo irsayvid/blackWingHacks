@@ -4,9 +4,23 @@
     <title>Mental Health Tracker</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/aos.css">
+     <link rel="stylesheet" href="css/owl.carousel.min.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/templatemo-digital-trend.css">
+     <style>
+          .navbar{
+               position:fixed;
+               padding : 1px;
+          }
+          </style>
     <style>
       html, body {
-      min-height: 100%;
+      min-height: 100vh;
       }
       body, div, form, input, select, textarea, p { 
       padding: 0;
@@ -32,8 +46,9 @@
       padding: 20px;
       }
       form {
-      width: 100%;
+      width: 80%;
       padding: 20px;
+      margin-top: 120px;
       border-radius: 6px;
       background: #fff;
       box-shadow: 0 0 25px 0 #892e9b; 
@@ -180,6 +195,45 @@
     </style>
   </head>
   <body>
+    <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+          <a class="navbar-brand active" href="index.html">
+             <img src = "images/logo.png" alt= "feather-wing logo" width = "150" length = "150" >
+             
+           <!-- <i class="fa fa-line-chart"></i> -->
+            Spread Your Wings 
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+             <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                 <a href="index.html#about" class="nav-link">About</a>
+               </li>
+               <li class="nav-item">
+               <a href="index.html#project" class="nav-link">Services</a>
+               </li>
+               <li class="nav-item">
+                  <a href="index.html#testimonial" class="nav-link">Testimonials</a>
+                </li>
+                 <li class="nav-item">
+                     <a href="./signin.html" class="nav-link">Sign in</a>
+                 </li>
+                 <li class="nav-item">
+                     <a href="./signup.html" class="nav-link">Sign up</a>
+                 </li>
+                 <li class="nav-item">
+                     <a href="./contact.html" class="nav-link">Contact</a>
+                 </li>
+             </ul>
+         </div>
+      </div>
+  </nav>
     <div class="testbox">
       <form action="/">
         <div class="banner">
@@ -194,7 +248,7 @@
           <p>How are you feeling?</p>
           <div class="question-answer">
             <div>
-              <input type="radio" value="Sad" id="radio_1" name="How are you feeling?"/>
+              <input type="radio" value="Sad" id="radio_1" name="How are you feeling?" required/>
               <label for="radio_1" class="radio"><span>Sad</span></label>
             </div>
             <div>
@@ -214,8 +268,8 @@
               <label for="radio_5" class="radio"><span>Okay</span></label>
             </div>
             <div>
-              <input type="radio" value="Exited" id="radio_6" name="How are you feeling?"/>
-              <label for="radio_6" class="radio"><span>Exited</span></label>
+              <input type="radio" value="Excited" id="radio_6" name="How are you feeling?"/>
+              <label for="radio_6" class="radio"><span>Excited</span></label>
             </div>
             <div>
             <div>
