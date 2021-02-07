@@ -109,7 +109,7 @@ function signUp(){
             swal('Your Account Created','Your account was created successfully, you can log in now.',
             ).then((value) => {
                 setTimeout(function(){
-                    window.location.replace("./index.html");
+                    window.location.replace("./signin.html");
                 }, 1000)
             });
         }).catch((error) => {
@@ -178,7 +178,7 @@ function signIn(){
                 title: 'Succesfully signed in', 
             }).then((value) => {
                 setTimeout(function(){
-                    window.location.replace("./index.html");
+                    window.location.replace("./SURVEY.html");
                 }, 1000)
             });
         }).catch((error) => {
