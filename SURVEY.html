@@ -262,7 +262,17 @@
         var worstthing = document.getElementById('worst-thing').value;
         var reflections = document.getElementById('reflections').value;
         console.log(date+" "+mood+" "+bestthing+" "+worstthing+" "+reflections);
-        var result = "bestthing="+bestthing;
+        var result = "date="+date+"mood="+mood+"bestthing="+bestthing+"worstthing="+worstthing+"reflections="+reflections;
+        $.ajax({
+          url: './apis/survey.php',
+          data:result,
+          type: 'post',
+          success: function(response) {
+          console.log(response);
+          dataArr = JSON.parse(response);
+          }
+        });
+      
       });
     </script>
   </body>
